@@ -5,3 +5,24 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+/* carousel color adjusting */
+.anwar-carousel-adjust {
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: ;
+  background-color: rgba(0, 0, 0, 0.534);
+  background-blend-mode: overlay;
+}
+
+.anwar-btn-book-now {
+  background-color: #ffffff;
+  color: #3f87f5;
+  cursor: pointer;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 5px;
+  padding: 9px 25px;
+}
