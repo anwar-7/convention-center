@@ -162,8 +162,6 @@
     </header>
     <!-- main section start -->
     <main>
-      <!-- ..........................  -->
-      <section></section>
       <!-- our package section -->
       <section class="container">
         <h2 class="text-center py-5 fw-bold">Our Package</h2>
@@ -637,6 +635,85 @@
           </div>
         </div>
       </section>
+      <!-- upcomming event section -->
+      <section>
+        <div class="container py-5">
+        <h2 class="text-center py-5 fw-bold">Upcoming Events</h2>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./images/dex.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Dubai Expo</h5>
+                      <p class="card-text">Dubai 2022 - World Expo 2020</p>
+                      <p>Thu, Feb 17, 2022 – Sun, Feb 27, 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./images/cex.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">China Expo</h5>
+                      <p class="card-text">Chaina 2022 - World 2020</p>
+                      <p>Tue, Mar 1, 2022 – Mon, Mar 7, 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./images/wex.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">World Expo '70 | world's fair, Ōsaka, Japan</h5>
+                      <p class="card-text">Mon, Mar 14, 2022 – Mon, Mar 21, 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             <div class="d-flex align-items-center justify-content-center">
+                  <!-- toast start -->
+             <div class="p-4">
+                <button type="button" class="btn anwar-btn-primary" id="toastbtn">Show Offer Toast</button>
+  
+                <div class="toast">
+                  <div class="toast-header">
+                    <strong class="me-auto">Offer for Now</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                  </div>
+                  <div class="toast-body">
+                    <p>20% Off for instant booking</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <!-- Button trigger modal -->
+<button type="button" class="btn anwar-btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+   Instent Booking Modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Book Now 20% Off</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        We are offering this offer 24 hours only. Buy now and contract us.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Purchese</button>
+        </div>
+      </div>
+    </div>
+  </div>
+              </div>
+             </div>
+             </div> 
+        </div>
+      </section>
       <!-- frequently asked quections section -->
       <section class="container pb-5">
         <h2 class="text-center py-5 fw-bold">Frequently Asked Questions</h2>
@@ -803,8 +880,31 @@
           /></a>
         </div>
       </div>
+      <section>
+        <div class="toast show">
+            <div class="toast-header">
+              <strong class="me-auto">Toast Header</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+              <p>Some text inside the toast body</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </footer>
     <!-- bootstrap js script -->
     <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- toast script -->
+<script>
+    document.getElementById("toastbtn").onclick = function() {
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function(toastEl) {
+    return new bootstrap.Toast(toastEl)
+    })
+    toastList.forEach(toast => toast.show()) 
+    }
+</script>
   </body>
 </html>
